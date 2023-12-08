@@ -2437,3 +2437,1374 @@ Traceback (most recent call last):
 TypeError: too many positional arguments
 [2023-12-08T23:13:35.951+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
 [2023-12-08T23:13:35.966+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 1.243 seconds
+[2023-12-08T23:14:06.075+0000] {processor.py:157} INFO - Started process (PID=202) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:14:06.075+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:14:06.076+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:14:06.076+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:14:06.507+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:14:06.504+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:14:06.507+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:14:06.524+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.452 seconds
+[2023-12-08T23:14:36.648+0000] {processor.py:157} INFO - Started process (PID=232) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:14:36.650+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:14:36.651+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:14:36.651+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:14:37.080+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:14:37.077+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:14:37.080+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:14:37.097+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.451 seconds
+[2023-12-08T23:15:07.226+0000] {processor.py:157} INFO - Started process (PID=254) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:15:07.228+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:15:07.229+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:15:07.228+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:15:07.650+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:15:07.647+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:15:07.650+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:15:07.666+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.443 seconds
+[2023-12-08T23:15:37.793+0000] {processor.py:157} INFO - Started process (PID=276) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:15:37.794+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:15:37.794+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:15:37.794+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:15:38.211+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:15:38.208+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:15:38.211+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:15:38.227+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.437 seconds
+[2023-12-08T23:16:08.358+0000] {processor.py:157} INFO - Started process (PID=306) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:16:08.360+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:16:08.361+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:16:08.360+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:16:08.809+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:16:08.806+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:16:08.809+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:16:08.823+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.468 seconds
+[2023-12-08T23:16:38.952+0000] {processor.py:157} INFO - Started process (PID=329) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:16:38.954+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:16:38.955+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:16:38.954+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:16:39.375+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:16:39.373+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:16:39.376+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:16:39.392+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.443 seconds
+[2023-12-08T23:17:09.521+0000] {processor.py:157} INFO - Started process (PID=359) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:17:09.523+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:17:09.524+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:17:09.523+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:17:09.945+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:17:09.942+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:17:09.945+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:17:09.961+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.443 seconds
+[2023-12-08T23:17:40.094+0000] {processor.py:157} INFO - Started process (PID=381) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:17:40.095+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:17:40.095+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:17:40.095+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:17:40.521+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:17:40.518+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:17:40.521+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:17:40.536+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.445 seconds
+[2023-12-08T23:18:10.669+0000] {processor.py:157} INFO - Started process (PID=404) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:18:10.670+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:18:10.671+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:18:10.670+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:18:11.087+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:18:11.084+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:18:11.087+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:18:11.102+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.435 seconds
+[2023-12-08T23:18:41.224+0000] {processor.py:157} INFO - Started process (PID=434) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:18:41.226+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:18:41.227+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:18:41.227+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:18:41.662+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:18:41.659+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:18:41.662+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:18:41.700+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.479 seconds
+[2023-12-08T23:19:11.831+0000] {processor.py:157} INFO - Started process (PID=456) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:19:11.832+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:19:11.832+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:19:11.832+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:19:12.242+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:19:12.240+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:19:12.243+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:19:12.257+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.429 seconds
+[2023-12-08T23:19:42.383+0000] {processor.py:157} INFO - Started process (PID=486) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:19:42.385+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:19:42.385+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:19:42.385+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:19:42.839+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:19:42.836+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:19:42.840+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:19:42.856+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.476 seconds
+[2023-12-08T23:20:12.987+0000] {processor.py:157} INFO - Started process (PID=508) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:12.989+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:20:12.990+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:12.990+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:13.405+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:13.402+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:20:13.405+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:13.421+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.436 seconds
+[2023-12-08T23:20:27.043+0000] {processor.py:157} INFO - Started process (PID=522) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:27.044+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:20:27.045+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:27.045+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:27.512+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:27.509+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 79, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 75, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:20:27.512+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:27.526+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.487 seconds
+[2023-12-08T23:20:51.583+0000] {processor.py:157} INFO - Started process (PID=544) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:51.585+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:20:51.586+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:51.585+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:51.588+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:51.588+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 69
+    @task(task_id='save_data_task')
+    ^
+IndentationError: expected an indented block
+[2023-12-08T23:20:51.589+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:51.605+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.025 seconds
+[2023-12-08T23:20:56.633+0000] {processor.py:157} INFO - Started process (PID=549) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:56.633+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:20:56.634+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:56.634+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:56.637+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:56.636+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 70
+    @task(task_id='save_data_task')
+    ^
+IndentationError: expected an indented block
+[2023-12-08T23:20:56.637+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:56.652+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.022 seconds
+[2023-12-08T23:20:59.655+0000] {processor.py:157} INFO - Started process (PID=562) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:20:59.655+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:20:59.656+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:20:59.656+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:21:00.097+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:21:00.094+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 80, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 76, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:21:00.098+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:21:00.116+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.464 seconds
+[2023-12-08T23:21:30.238+0000] {processor.py:157} INFO - Started process (PID=584) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:21:30.239+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:21:30.239+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:21:30.239+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:21:30.658+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:21:30.655+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 80, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 76, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:21:30.659+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:21:30.674+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.439 seconds
+[2023-12-08T23:22:00.806+0000] {processor.py:157} INFO - Started process (PID=606) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:00.808+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:22:00.809+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:00.808+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:01.312+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:01.308+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 80, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 76, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:22:01.312+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:01.330+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.527 seconds
+[2023-12-08T23:22:02.355+0000] {processor.py:157} INFO - Started process (PID=620) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:02.355+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:22:02.356+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:02.356+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:02.791+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:02.789+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 80, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 76, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:22:02.792+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:02.808+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.456 seconds
+[2023-12-08T23:22:32.931+0000] {processor.py:157} INFO - Started process (PID=642) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:32.933+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:22:32.933+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:32.933+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:33.352+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:33.349+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 80, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 76, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:22:33.352+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:33.366+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.439 seconds
+[2023-12-08T23:22:49.444+0000] {processor.py:157} INFO - Started process (PID=656) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:49.445+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:22:49.445+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:49.445+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:49.871+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:22:49.868+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 80, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 76, in data_processing_and_cleaning
+    preprocessed_data = preprocess_data(cleaned_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:22:49.872+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:22:49.887+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.446 seconds
+[2023-12-08T23:23:13.999+0000] {processor.py:157} INFO - Started process (PID=679) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:14.001+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:14.001+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:14.001+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:14.420+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:14.623+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:14.623+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:23:14.642+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:14.641+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:23:14.661+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.665 seconds
+[2023-12-08T23:23:18.548+0000] {processor.py:157} INFO - Started process (PID=693) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:18.548+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:18.549+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:18.549+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:18.987+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:18.996+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:18.996+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:23:19.018+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:19.018+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:23:19.039+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.494 seconds
+[2023-12-08T23:23:21.710+0000] {processor.py:157} INFO - Started process (PID=699) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:21.712+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:21.712+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:21.712+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:22.139+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:22.148+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:22.148+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:23:22.169+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:22.169+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:23:22.188+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.481 seconds
+[2023-12-08T23:23:24.084+0000] {processor.py:157} INFO - Started process (PID=705) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:24.084+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:24.085+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:24.085+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:24.512+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:24.522+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:24.522+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:23:24.543+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:24.543+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:23:24.562+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.481 seconds
+[2023-12-08T23:23:30.243+0000] {processor.py:157} INFO - Started process (PID=711) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:30.244+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:30.244+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:30.244+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:30.685+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:30.682+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 70, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 65, in data_processing_and_cleaning
+    cleaned_data = clean_data(loaded_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2958, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-12-08T23:23:30.685+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:30.715+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.475 seconds
+[2023-12-08T23:23:32.615+0000] {processor.py:157} INFO - Started process (PID=726) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:32.616+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:32.617+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:32.617+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:33.052+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:33.061+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:33.061+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:23:33.083+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:33.082+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:23:33.102+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.490 seconds
+[2023-12-08T23:23:50.819+0000] {processor.py:157} INFO - Started process (PID=739) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:50.821+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:50.822+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:50.821+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:51.268+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:51.265+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 70, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 65, in data_processing_and_cleaning
+    cleaned_data = clean_data()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2952, in _bind
+    raise TypeError(msg) from None
+TypeError: missing a required argument: 'input_data'
+[2023-12-08T23:23:51.268+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:51.285+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.469 seconds
+[2023-12-08T23:23:53.195+0000] {processor.py:157} INFO - Started process (PID=745) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:53.196+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:53.196+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:53.196+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:53.644+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:53.641+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 70, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 65, in data_processing_and_cleaning
+    cleaned_data = clean_data()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2952, in _bind
+    raise TypeError(msg) from None
+TypeError: missing a required argument: 'input_data'
+[2023-12-08T23:23:53.644+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:53.662+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.470 seconds
+[2023-12-08T23:23:54.693+0000] {processor.py:157} INFO - Started process (PID=751) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:54.693+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:54.694+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:54.694+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:55.122+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:55.119+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 70, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 65, in data_processing_and_cleaning
+    cleaned_data = clean_data()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2952, in _bind
+    raise TypeError(msg) from None
+TypeError: missing a required argument: 'input_data'
+[2023-12-08T23:23:55.122+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:55.136+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.446 seconds
+[2023-12-08T23:23:55.701+0000] {processor.py:157} INFO - Started process (PID=757) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:55.702+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:55.703+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:55.702+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:56.127+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:56.124+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 70, in <module>
+    dag = data_processing_and_cleaning()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 65, in data_processing_and_cleaning
+    cleaned_data = clean_data()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 346, in __call__
+    op = self.operator_class(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 49, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 208, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 3037, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.8/inspect.py", line 2952, in _bind
+    raise TypeError(msg) from None
+TypeError: missing a required argument: 'input_data'
+[2023-12-08T23:23:56.128+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:56.169+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.470 seconds
+[2023-12-08T23:23:58.174+0000] {processor.py:157} INFO - Started process (PID=771) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:58.175+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:23:58.175+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:58.175+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:58.606+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:23:58.716+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:58.715+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:23:58.738+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:23:58.738+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:23:58.760+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.589 seconds
+[2023-12-08T23:24:16.849+0000] {processor.py:157} INFO - Started process (PID=785) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:16.851+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:16.852+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:16.852+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:17.352+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:17.363+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:17.362+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:17.387+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:17.386+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:17.408+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.563 seconds
+[2023-12-08T23:24:22.286+0000] {processor.py:157} INFO - Started process (PID=799) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:22.288+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:22.289+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:22.289+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:22.714+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:22.723+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:22.723+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:22.746+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:22.745+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:22.765+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.481 seconds
+[2023-12-08T23:24:24.458+0000] {processor.py:157} INFO - Started process (PID=805) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:24.459+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:24.459+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:24.459+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:24.869+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:24.878+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:24.878+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:24.904+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:24.904+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:24.924+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.469 seconds
+[2023-12-08T23:24:25.809+0000] {processor.py:157} INFO - Started process (PID=811) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:25.809+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:25.810+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:25.810+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:26.251+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:26.262+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:26.262+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:26.293+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:26.292+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:26.315+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.509 seconds
+[2023-12-08T23:24:45.019+0000] {processor.py:157} INFO - Started process (PID=825) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:45.020+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:45.020+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:45.020+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:45.437+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:45.459+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:45.458+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:45.480+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:45.480+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:45.497+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.481 seconds
+[2023-12-08T23:24:46.410+0000] {processor.py:157} INFO - Started process (PID=831) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:46.410+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:46.411+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:46.411+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:46.414+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:46.413+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 59
+    train.
+         ^
+SyntaxError: invalid syntax
+[2023-12-08T23:24:46.414+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:46.432+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.025 seconds
+[2023-12-08T23:24:52.439+0000] {processor.py:157} INFO - Started process (PID=843) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:52.440+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:52.440+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:52.440+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:52.871+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:52.892+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:52.892+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:52.913+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:52.913+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:52.930+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.494 seconds
+[2023-12-08T23:24:54.480+0000] {processor.py:157} INFO - Started process (PID=849) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:54.481+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:24:54.481+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:54.481+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:54.892+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:24:54.914+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:54.914+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:24:54.934+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:24:54.934+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:24:54.952+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.475 seconds
+[2023-12-08T23:25:02.993+0000] {processor.py:157} INFO - Started process (PID=863) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:02.995+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:02.996+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:02.996+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:02.998+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:02.998+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 59
+    pd.
+      ^
+SyntaxError: invalid syntax
+[2023-12-08T23:25:02.999+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:03.015+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.025 seconds
+[2023-12-08T23:25:04.007+0000] {processor.py:157} INFO - Started process (PID=868) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:04.008+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:04.008+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:04.008+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:04.420+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:04.444+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:04.444+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:04.465+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:04.464+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:04.483+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.479 seconds
+[2023-12-08T23:25:10.528+0000] {processor.py:157} INFO - Started process (PID=874) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:10.529+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:10.529+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:10.529+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:10.951+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:10.976+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:10.976+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:10.997+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:10.997+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:11.015+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.490 seconds
+[2023-12-08T23:25:13.049+0000] {processor.py:157} INFO - Started process (PID=888) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:13.050+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:13.051+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:13.050+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:13.494+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:13.517+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:13.516+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:13.537+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:13.537+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:13.555+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.509 seconds
+[2023-12-08T23:25:16.553+0000] {processor.py:157} INFO - Started process (PID=894) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:16.554+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:16.554+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:16.554+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:16.965+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:16.987+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:16.986+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:17.007+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:17.007+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:17.024+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.473 seconds
+[2023-12-08T23:25:27.636+0000] {processor.py:157} INFO - Started process (PID=909) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:27.637+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:27.638+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:27.638+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:28.103+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:28.126+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:28.125+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:28.147+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:28.147+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:28.165+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.533 seconds
+[2023-12-08T23:25:33.108+0000] {processor.py:157} INFO - Started process (PID=915) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:33.109+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:33.109+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:33.109+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:33.112+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:33.111+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 59
+    pd.read_sql(SELECT * FROM train_clean_table)
+                              ^
+SyntaxError: invalid syntax
+[2023-12-08T23:25:33.112+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:33.129+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.024 seconds
+[2023-12-08T23:25:35.119+0000] {processor.py:157} INFO - Started process (PID=920) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:35.120+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:35.121+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:35.121+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:35.124+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:35.123+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 59
+    pd.read_sql(SELECT * FROM train_clean_table)
+                              ^
+SyntaxError: invalid syntax
+[2023-12-08T23:25:35.124+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:35.141+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.024 seconds
+[2023-12-08T23:25:40.179+0000] {processor.py:157} INFO - Started process (PID=933) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:40.179+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:40.180+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:40.180+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:40.183+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:40.182+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 59
+    pd.read_sql(SELECT * FROM train_clean_table', engine)
+                              ^
+SyntaxError: invalid syntax
+[2023-12-08T23:25:40.183+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:40.200+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.024 seconds
+[2023-12-08T23:25:46.209+0000] {processor.py:157} INFO - Started process (PID=938) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:46.209+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:46.210+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:46.210+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:46.628+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:46.650+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:46.650+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:46.671+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:46.671+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:46.690+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.484 seconds
+[2023-12-08T23:25:54.264+0000] {processor.py:157} INFO - Started process (PID=952) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:54.265+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:54.266+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:54.265+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:54.701+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:54.723+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:54.722+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:54.743+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:54.743+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:54.761+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.499 seconds
+[2023-12-08T23:25:56.750+0000] {processor.py:157} INFO - Started process (PID=958) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:56.751+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:25:56.752+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:56.752+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:57.185+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:25:57.206+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:57.206+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:25:57.226+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:25:57.226+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:25:57.245+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.498 seconds
+[2023-12-08T23:26:03.819+0000] {processor.py:157} INFO - Started process (PID=971) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:03.820+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:03.821+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:03.820+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:04.273+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:04.306+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:04.306+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:26:04.328+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:04.327+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:26:04.349+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.535 seconds
+[2023-12-08T23:26:08.310+0000] {processor.py:157} INFO - Started process (PID=978) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:08.311+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:08.311+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:08.311+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:08.731+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:08.752+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:08.751+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:26:08.772+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:08.772+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:26:08.790+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.483 seconds
+[2023-12-08T23:26:10.393+0000] {processor.py:157} INFO - Started process (PID=984) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:10.394+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:10.395+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:10.394+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:10.810+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:10.832+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:10.832+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:26:10.861+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:10.861+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:26:10.888+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.498 seconds
+[2023-12-08T23:26:24.871+0000] {processor.py:157} INFO - Started process (PID=998) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:24.872+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:24.873+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:24.872+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:24.875+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:24.875+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 63
+    def save_data():
+    ^
+SyntaxError: invalid syntax
+[2023-12-08T23:26:24.876+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:24.894+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.025 seconds
+[2023-12-08T23:26:29.898+0000] {processor.py:157} INFO - Started process (PID=1011) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:29.898+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:29.899+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:29.899+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:29.902+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:29.901+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 63
+    def save_data():
+    ^
+SyntaxError: invalid syntax
+[2023-12-08T23:26:29.903+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:29.920+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.025 seconds
+[2023-12-08T23:26:31.939+0000] {processor.py:157} INFO - Started process (PID=1016) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:31.939+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:31.940+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:31.940+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:32.366+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:32.388+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:32.388+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:26:32.410+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:32.410+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:26:32.427+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.491 seconds
+[2023-12-08T23:26:40.979+0000] {processor.py:157} INFO - Started process (PID=1022) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:40.980+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:40.980+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:40.980+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:41.407+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:41.430+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:41.429+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:26:41.452+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:41.452+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:26:41.470+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.494 seconds
+[2023-12-08T23:26:42.492+0000] {processor.py:157} INFO - Started process (PID=1036) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:42.492+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:42.493+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:42.493+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:42.943+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:42.971+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:42.970+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:26:42.998+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:42.998+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:26:43.020+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.530 seconds
+[2023-12-08T23:26:44.053+0000] {processor.py:157} INFO - Started process (PID=1042) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:44.054+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:26:44.054+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:44.054+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:44.057+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:26:44.056+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 61
+    Y =
+       ^
+SyntaxError: invalid syntax
+[2023-12-08T23:26:44.057+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:26:44.076+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.026 seconds
+[2023-12-08T23:27:12.159+0000] {processor.py:157} INFO - Started process (PID=1063) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:12.161+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:12.162+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:12.162+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:12.617+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:12.638+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:12.638+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:12.660+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:12.660+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:12.679+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.523 seconds
+[2023-12-08T23:27:13.178+0000] {processor.py:157} INFO - Started process (PID=1069) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:13.178+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:13.179+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:13.179+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:13.629+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:13.651+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:13.650+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:13.672+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:13.672+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:13.691+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.516 seconds
+[2023-12-08T23:27:16.722+0000] {processor.py:157} INFO - Started process (PID=1075) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:16.723+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:16.723+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:16.723+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:17.177+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:17.200+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:17.199+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:17.221+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:17.220+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:17.237+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.518 seconds
+[2023-12-08T23:27:17.735+0000] {processor.py:157} INFO - Started process (PID=1081) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:17.735+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:17.736+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:17.736+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:18.149+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:18.172+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:18.172+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:18.194+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:18.193+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:18.211+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.479 seconds
+[2023-12-08T23:27:21.758+0000] {processor.py:157} INFO - Started process (PID=1095) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:21.759+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:21.760+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:21.760+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:22.215+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:22.238+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:22.238+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:22.260+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:22.260+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:22.278+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.524 seconds
+[2023-12-08T23:27:23.257+0000] {processor.py:157} INFO - Started process (PID=1101) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:23.258+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:23.259+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:23.258+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:23.679+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:23.701+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:23.701+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:23.721+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:23.721+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:23.740+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.486 seconds
+[2023-12-08T23:27:27.324+0000] {processor.py:157} INFO - Started process (PID=1107) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:27.324+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:27.325+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:27.325+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:27.761+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:27.784+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:27.784+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:27.805+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:27.805+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:27.822+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.502 seconds
+[2023-12-08T23:27:38.879+0000] {processor.py:157} INFO - Started process (PID=1121) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:38.880+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:38.881+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:38.880+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:39.305+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:39.328+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:39.327+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:39.348+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:39.348+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:39.367+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.490 seconds
+[2023-12-08T23:27:42.898+0000] {processor.py:157} INFO - Started process (PID=1127) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:42.899+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:42.899+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:42.899+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:43.309+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:43.331+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:43.331+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:43.351+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:43.351+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:43.369+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.474 seconds
+[2023-12-08T23:27:45.914+0000] {processor.py:157} INFO - Started process (PID=1140) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:45.915+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:45.915+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:45.915+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:46.354+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:46.378+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:46.377+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:46.402+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:46.402+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:46.422+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.511 seconds
+[2023-12-08T23:27:48.423+0000] {processor.py:157} INFO - Started process (PID=1147) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:48.426+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:48.427+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:48.427+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:48.924+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:48.948+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:48.948+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:48.971+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:48.971+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:48.991+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.572 seconds
+[2023-12-08T23:27:50.025+0000] {processor.py:157} INFO - Started process (PID=1153) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:50.026+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:50.027+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:50.026+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:50.030+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:50.029+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 64
+    X.
+     ^
+SyntaxError: invalid syntax
+[2023-12-08T23:27:50.031+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:50.051+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.030 seconds
+[2023-12-08T23:27:52.035+0000] {processor.py:157} INFO - Started process (PID=1158) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:52.036+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:52.036+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:52.036+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:52.463+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:52.484+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:52.484+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:52.504+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:52.504+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:52.522+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.490 seconds
+[2023-12-08T23:27:53.552+0000] {processor.py:157} INFO - Started process (PID=1164) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:53.553+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:53.553+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:53.553+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:54.007+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:54.029+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:54.029+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:54.049+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:54.049+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:54.067+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.517 seconds
+[2023-12-08T23:27:54.561+0000] {processor.py:157} INFO - Started process (PID=1170) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:54.561+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:54.562+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:54.562+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:55.010+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:55.032+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:55.031+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:55.052+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:55.052+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:55.072+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.514 seconds
+[2023-12-08T23:27:59.112+0000] {processor.py:157} INFO - Started process (PID=1184) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:59.113+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:27:59.113+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:59.113+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:59.563+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:27:59.587+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:59.586+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:27:59.612+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:27:59.612+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:27:59.632+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.523 seconds
+[2023-12-08T23:28:02.667+0000] {processor.py:157} INFO - Started process (PID=1190) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:02.668+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:02.669+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:02.668+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:03.096+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:03.118+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:03.117+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:28:03.139+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:03.139+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:28:03.159+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.495 seconds
+[2023-12-08T23:28:09.201+0000] {processor.py:157} INFO - Started process (PID=1196) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:09.201+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:09.202+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:09.202+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:09.205+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:09.204+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 64
+    X.to_csv('/opt/airflow/data/X.csv', sep=)
+                                            ^
+SyntaxError: invalid syntax
+[2023-12-08T23:28:09.206+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:09.223+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.025 seconds
+[2023-12-08T23:28:11.250+0000] {processor.py:157} INFO - Started process (PID=1201) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:11.251+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:11.252+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:11.251+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:11.740+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:11.767+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:11.766+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:28:11.801+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:11.801+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:28:11.831+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.584 seconds
+[2023-12-08T23:28:12.867+0000] {processor.py:157} INFO - Started process (PID=1215) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:12.868+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:12.869+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:12.868+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:13.342+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:13.372+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:13.371+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:28:13.405+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:13.405+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:28:13.430+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.567 seconds
+[2023-12-08T23:28:16.272+0000] {processor.py:157} INFO - Started process (PID=1221) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:16.274+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:16.274+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:16.274+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:16.277+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:16.276+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/data_processing_cleaning.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_processing_cleaning.py", line 64
+    X.to_csv('/opt/airflow/data/X.csv', sep=',', index=)
+                                                       ^
+SyntaxError: invalid syntax
+[2023-12-08T23:28:16.277+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:16.294+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.026 seconds
+[2023-12-08T23:28:20.292+0000] {processor.py:157} INFO - Started process (PID=1226) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:20.292+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:20.293+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:20.293+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:20.712+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:20.733+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:20.732+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:28:20.754+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:20.754+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:28:20.772+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.483 seconds
+[2023-12-08T23:28:27.357+0000] {processor.py:157} INFO - Started process (PID=1240) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:27.358+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:27.359+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:27.359+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:27.818+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:27.840+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:27.840+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:28:27.861+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:27.861+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:28:27.880+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.527 seconds
+[2023-12-08T23:28:30.834+0000] {processor.py:157} INFO - Started process (PID=1246) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:30.835+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:28:30.835+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:30.835+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:31.250+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:28:31.271+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:31.271+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:28:31.294+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:28:31.294+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:28:31.312+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.481 seconds
+[2023-12-08T23:29:01.440+0000] {processor.py:157} INFO - Started process (PID=1280) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:29:01.441+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:29:01.442+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:29:01.442+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:29:01.962+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:29:01.984+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:29:01.983+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:29:02.005+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:29:02.005+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:29:02.021+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.583 seconds
+[2023-12-08T23:29:32.153+0000] {processor.py:157} INFO - Started process (PID=1310) to work on /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:29:32.154+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_cleaning.py for tasks to queue
+[2023-12-08T23:29:32.155+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:29:32.155+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:29:32.606+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_and_cleaning']) retrieved from /opt/airflow/dags/data_processing_cleaning.py
+[2023-12-08T23:29:32.629+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:29:32.628+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T23:29:32.649+0000] {logging_mixin.py:154} INFO - [2023-12-08T23:29:32.649+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_and_cleaning to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T23:29:32.667+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_cleaning.py took 0.517 seconds
