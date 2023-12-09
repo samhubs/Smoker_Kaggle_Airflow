@@ -1,7 +1,8 @@
 from airflow.decorators import dag, task
+from airflow.sensors.external_task_sensor import ExternalTaskSensor
 import numpy as np
 import pandas as pd 
-from datetime import timedelta
+from datetime import datetime, timedelta
 from airflow.utils.dates import days_ago
 from sklearn.model_selection import train_test_split
 from lightgbm import LGBMClassifier
@@ -9,13 +10,24 @@ from lightgbm import LGBMClassifier
 # Define the DAG for model training and evaluation
 @dag(
     schedule_interval=timedelta(days=1),
-    start_date=days_ago(0),
+    start_date=datetime(2023, 11, 9, 19, 30), #9 Dec, 12:30 PM MST,
     default_args={'owner': 'airflow', 'retries': 1, 'retry_delay': timedelta(minutes=5)},
     catchup=False,
     tags=['model_training_evaluation'],
 )
 def model_training():
     # Task to split the dataset into training and testing sets
+
+    # Wait for Data processing DAG to complete
+    wait_for_dag1 = ExternalTaskSensor(
+        task_id='wait_for_dag1_task',
+        external_dag_id='data_processing',  # Replace with the actual dag_id of dag1
+        external_task_id='save_data_task',  # Replace with a task_id from dag1 to wait on
+        timeout=600,
+        poke_interval=30,
+        mode='reschedule',
+    )
+
     @task(task_id='split_data')
     def split_data():
         SEED = np.random.seed(44)
@@ -49,7 +61,7 @@ def model_training():
         LGBMModel.booster_.save_model('/opt/airflow/models/lgb_classifier.txt')
 
     # Define the sequence of tasks
-    split_data() >> training()
+    wait_for_dag1 >> split_data() >> training()
 
 # Instantiate the DAG
 dag = model_training()

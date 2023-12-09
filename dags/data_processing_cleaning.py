@@ -1,11 +1,12 @@
 import os
-from datetime import timedelta
+from datetime import datetime, timedelta
 from airflow.decorators import dag, task
 from airflow.utils.dates import days_ago
 from sqlalchemy import create_engine
 import pandas as pd
 from utils.file_utils import save_files
 from utils.generate_histograms import generate_histograms
+from utils.plot_correlation_matrix import correlation_matrix
 # from matplotlib import pyplot as plt
 
 # Database connection string
@@ -18,7 +19,7 @@ engine = create_engine(CONNECTION_STRING)
 
 @dag(
     schedule_interval=timedelta(days=1),
-    start_date=days_ago(0),
+    start_date=datetime(2023, 11, 9, 19, 15), #9 Dec, 12:15 PM MST
     default_args={'owner':'airflow', 'retries':1, 'retry_delay':timedelta(minutes=5)},
     tags=['data_processing'],
     catchup=False
@@ -55,6 +56,7 @@ def data_processing_and_cleaning():
     def preprocess_data():
         train = pd.read_sql('SELECT * FROM train_clean_table', engine)
         
+        #Create the training set
         Y = train['smoking']
         X = train.drop(['smoking'], axis=1)
 
@@ -66,13 +68,12 @@ def data_processing_and_cleaning():
         X = pd.read_csv('/opt/airflow/data/X.csv')
         Y = pd.read_csv('/opt/airflow/data/Y.csv')
 
+        # Generate the histograms for visualisations
         generate_histograms(X, '/opt/airflow/plots')
         generate_histograms(Y, '/opt/airflow/plots')
 
-    loaded_data = load_data()
-    cleaned_data = clean_data()
-    preprocessed_data = preprocess_data()
-    plot_data() 
-
+        # Generate and plot correlation between features
+        correlation_matrix(X, '/opt/airflow/plots')
+    load_data() >> clean_data() >> preprocess_data() >> plot_data() 
 
 dag = data_processing_and_cleaning()

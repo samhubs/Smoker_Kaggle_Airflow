@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+#generates and saves histograms
 def generate_histograms(dataframe, output_folder):
     for column in dataframe.columns:
         plt.figure()
