@@ -7,6 +7,10 @@ USER root
 # RUN chown -R airflow: /home/airflow/.kaggle
 # RUN chmod 600 /home/airflow/.kaggle/kaggle.json
 
+RUN apt-get update && apt-get install -y \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+    
 # Install the Python dependencies as root
 COPY requirements.txt .
 
