@@ -2,3 +2,4 @@ logs/
 models/
 plugin/
 utils/__pycache__/
+plots/

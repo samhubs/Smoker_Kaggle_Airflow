@@ -1,15 +1,12 @@
-
-#Import dependencies
-# import subprocess
+import os
 from datetime import timedelta
 from airflow.decorators import dag, task
 from airflow.utils.dates import days_ago
-import psycopg2
 from sqlalchemy import create_engine
-# import os
-# import kaggle
 import pandas as pd
 from utils.file_utils import save_files
+from utils.generate_histograms import generate_histograms
+# from matplotlib import pyplot as plt
 
 # Database connection string
 # Replace with your actual database connection details
@@ -65,13 +62,21 @@ def data_processing_and_cleaning():
         Y.to_csv('/opt/airflow/data/Y.csv', sep=',', index=False)
 
     @task(task_id='save_data_task')
-    def save_data():
-        pass
+    def plot_data():
+        X = pd.read_csv('/opt/airflow/data/X.csv')
+        Y = pd.read_csv('/opt/airflow/data/Y.csv')
+
+        generate_histograms(X, '/opt/airflow/plots')
+        generate_histograms(Y, '/opt/airflow/plots')
+
+
+        
+
 
     loaded_data = load_data()
     cleaned_data = clean_data()
     preprocessed_data = preprocess_data()
-    save_data() 
+    plot_data() 
 
 
 dag = data_processing_and_cleaning()

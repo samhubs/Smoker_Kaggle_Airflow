@@ -40,6 +40,7 @@ x-airflow-common:
     - ./plugins:/opt/airflow/plugins
     - ./data:/opt/airflow/data
     - ./models:/opt/airflow/models
+    - ./plots:/opt/airflow/plots
   user: "${AIRFLOW_UID:-1000}:0"
   depends_on:
     &airflow-common-depends-on
