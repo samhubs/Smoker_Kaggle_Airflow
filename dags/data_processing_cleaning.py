@@ -69,10 +69,6 @@ def data_processing_and_cleaning():
         generate_histograms(X, '/opt/airflow/plots')
         generate_histograms(Y, '/opt/airflow/plots')
 
-
-        
-
-
     loaded_data = load_data()
     cleaned_data = clean_data()
     preprocessed_data = preprocess_data()
