@@ -1,10 +1,25 @@
-from flask import Flask, send_from_directory, render_template_string
+from flask import Flask, request, jsonify, send_from_directory, render_template_string
+import pandas as pd
+from lightgbm import LGBMClassifier
+import lightgbm
 import os
 
 app = Flask(__name__)
 
-# Folder where plots are saved
-PLOTS_FOLDER = '/home/sameer/GitHub_projects/Airflow tutorials/Smoke_markers_binary_classification/plots'
+# Update the paths according to your Docker container's directory structure
+MODEL_PATH = '/opt/airflow/lgb_classifier.txt'  
+PLOTS_FOLDER = '/opt/airflow/plots'
+
+# Load your trained model
+# model = LGBMClassifier()
+model = lightgbm.Booster(model_file=MODEL_PATH)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.get_json()
+    df = pd.DataFrame(data, index=[0])
+    prediction = model.predict(df)
+    return jsonify({'prediction': list(prediction)})
 
 @app.route('/')
 def index():
